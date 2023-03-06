@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Rep Max Calculator</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>See How Much Weight You Can Lift</h1>
+    </header>
+    <main>
+      <section class="calculator-section">
+        <h2>Calculate Your Max Weights</h2>
+        <div class="calculator-container">
+          <form>
+            <label for="weight">Enter weight lifted (in pounds):</label>,<br>
+            <input type="number" id="weight" name="weight" required>
+            <label for="reps">Enter number of reps:</label>
+            <input type="number" id="reps" name="reps" required>
+            <button type="button" onclick="calculateWeights()">Calculate</button>
+          </form>
+          <div class="result">
+            <p>Your estimated one rep max is: <span id="one-rep-max"></span></p>
+            <table id="weights-table">
+              <thead>
+                <tr>
+                  <th>Reps</th>
+                  <th>Estimated Max Weight</th>
+                </tr>
+              </thead>
+              <tbody id="weights-table-body">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>© 2023 EgoLifters</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
